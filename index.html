@@ -2,8 +2,8 @@
 <html ng-app="store">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/styles/custom.css">
+	<link rel="stylesheet" type="text/css" href="app/assets/styles/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="app/assets/styles/custom.css">
 	<title></title>
 </head>
 
@@ -18,10 +18,7 @@
 
 		<!-- product -->
 		<li class="list-group-item" ng-repeat="product in store.products" ng-hide="product.soldOut">
-			<h3>
-				{{product.name}}
-				<em class="pull-right">{{product.price | currency }}</em>
-			</h3>
+			<h3 ng-include="'app/views/product-title.html'"></h3>
 
 			<!-- image gallery -->
 			<div class="gallery text-center" ng-controller="GalleryController as gallery">
@@ -69,13 +66,13 @@
 							<blockquote>
 								<strong>{{review.stars}} stars</strong>
 								{{review.body}}
-								<cite class="clearfix">-{{review.author}}</cite>
+								<cite class="clearfix">-{{review.author}} on {{review.createdAt | date:'medium'}}</cite>
 							</blockquote>							
 						</li>
 					</ul>
 
 					<!-- review form -->
-					<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
+					<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
 
 						<!-- live preview -->
 						<blockquote>
@@ -87,19 +84,18 @@
 						<!-- new review form-->
 						<h4>Submit a Review</h4>
 						<fieldset class="form-group">
-							<select class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" ng-model="reviewCtrl.review.stars">
+							<select class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" ng-model="reviewCtrl.review.stars" required>
 								<option value="">Rate the Geometry</option>
 							</select>							
 						</fieldset>
 						<fieldset class="form-group">
-							<textarea class="form-control" placeholder="Write a short Review..." title="Review" ng-model="reviewCtrl.review.body"></textarea>							
+							<textarea class="form-control" placeholder="Write a short Review..." title="Review" ng-model="reviewCtrl.review.body" required></textarea>							
 						</fieldset>
 						<fieldset class="form-group">
-							<input class="form-control" type="email" placeholder="jimmy@example.com" title="Email" ng-model="reviewCtrl.review.author" />							
+							<input class="form-control" type="email" placeholder="jimmy@example.com" title="Email" ng-model="reviewCtrl.review.author" required/>							
 						</fieldset>
-						<fieldset class="form-group">
-							<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
-						</fieldset>
+						<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+						<div>reviewForm is {{reviewForm.$valid}}</div>
 					</form>
 				</div>
 			</section>
@@ -108,12 +104,12 @@
 		</li>
 	</ul>
 
-	<script type="text/javascript" src="js/vendor/angular.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<script type="text/javascript" src="js/controllers/store_controller.js"></script>
-	<script type="text/javascript" src="js/controllers/panel_controller.js"></script>
-	<script type="text/javascript" src="js/controllers/gallery_controller.js"></script>
-	<script type="text/javascript" src="js/controllers/review_controller.js"></script>
+	<script type="text/javascript" src="app/assets/libs/angular.min.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/controllers/store_controller.js"></script>
+	<script type="text/javascript" src="app/controllers/panel_controller.js"></script>
+	<script type="text/javascript" src="app/controllers/gallery_controller.js"></script>
+	<script type="text/javascript" src="app/controllers/review_controller.js"></script>
 
 </body>
 </html>

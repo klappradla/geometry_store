@@ -3,7 +3,7 @@ angular.module("store")
 		this.review = {};
 
 		this.addReview = function(product) {
-			console.log("hello");
+			this.review.createdAt = Date.now();
 			product.reviews.push(this.review);
 			this.review = {};
 		};
