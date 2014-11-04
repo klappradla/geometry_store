@@ -75,27 +75,27 @@
 					</ul>
 
 					<!-- review form -->
-					<form name="reviewForm">
+					<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)">
 
 						<!-- live preview -->
 						<blockquote>
-							<strong>{{review.stars}} stars</strong>
-							{{review.body}}
-							<cite class="clearfix">-{{review.author}}</cite>
+							<strong>{{reviewCtrl.review.stars}} stars</strong>
+							{{reviewCtrl.review.body}}
+							<cite class="clearfix">-{{reviewCtrl.review.author}}</cite>
 						</blockquote>
 
 						<!-- new review form-->
 						<h4>Submit a Review</h4>
 						<fieldset class="form-group">
-							<select class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" ng-model="review.stars">
+							<select class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" ng-model="reviewCtrl.review.stars">
 								<option value="">Rate the Geometry</option>
 							</select>							
 						</fieldset>
 						<fieldset class="form-group">
-							<textarea class="form-control" placeholder="Write a short Review..." title="Review" ng-model="review.body"></textarea>							
+							<textarea class="form-control" placeholder="Write a short Review..." title="Review" ng-model="reviewCtrl.review.body"></textarea>							
 						</fieldset>
 						<fieldset class="form-group">
-							<input class="form-control" type="email" placeholder="jimmy@example.com" title="Email" ng-model="review.author" />							
+							<input class="form-control" type="email" placeholder="jimmy@example.com" title="Email" ng-model="reviewCtrl.review.author" />							
 						</fieldset>
 						<fieldset class="form-group">
 							<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
@@ -113,6 +113,7 @@
 	<script type="text/javascript" src="js/controllers/store_controller.js"></script>
 	<script type="text/javascript" src="js/controllers/panel_controller.js"></script>
 	<script type="text/javascript" src="js/controllers/gallery_controller.js"></script>
+	<script type="text/javascript" src="js/controllers/review_controller.js"></script>
 
 </body>
 </html>
