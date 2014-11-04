@@ -20,17 +20,8 @@
 		<li class="list-group-item" ng-repeat="product in store.products" ng-hide="product.soldOut">
 			<product-title></product-title>
 
-			<!-- image gallery -->
-			<div class="gallery text-center" ng-controller="GalleryController as gallery">
-				<div class="img-wrap">
-					<img ng-src="{{product.images[gallery.current].full}}"/>
-				</div>
-				<ul class="list-inline clearfix">
-					<li class="thumbnail" ng-repeat="image in product.images">
-						<img ng-src="{{image.thumb}}"/>
-					</li>
-				</ul>
-			</div>
+			<!-- images -->
+			<product-images></product-images>
 
 			<!-- tabs -->
 			<section ng-controller="PanelController as panel">
@@ -62,6 +53,7 @@
 
 	<script type="text/javascript" src="app/assets/libs/angular.min.js"></script>
 	<script type="text/javascript" src="app/app.js"></script>
+	
 	<script type="text/javascript" src="app/controllers/store_controller.js"></script>
 	<script type="text/javascript" src="app/controllers/panel_controller.js"></script>
 	<script type="text/javascript" src="app/controllers/gallery_controller.js"></script>

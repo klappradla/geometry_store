@@ -1,0 +1,10 @@
+<div class="gallery text-center" ng-controller="GalleryController as gallery">
+	<div class="img-wrap">
+		<img ng-src="{{product.images[gallery.current].full}}"/>
+	</div>
+	<ul class="list-inline clearfix">
+		<li class="thumbnail" ng-repeat="image in product.images">
+			<img ng-src="{{image.thumb}}"/>
+		</li>
+	</ul>
+</div>

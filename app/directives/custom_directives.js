@@ -15,18 +15,33 @@ angular.module("store")
 	});
 
 angular.module("store")
+	.directive("productImages", function() {
+		return {
+			restrict: "E",
+			templateUrl: "app/views/product-images.html"
+		}
+	});
+
+angular.module("store")
 	.directive("productSpecs", function() {
 		return {
-			restrict: "A",
+			restrict: "A", // attribute
 			templateUrl: "app/views/product-specs.html"
 		}
 	});
 
 angular.module("store")
 	.directive("productReviews", function() {
-		console.log("called");
 		return {
 			restrict: "E",
 			templateUrl: "app/views/product-reviews.html"
+		}
+	});
+
+angular.module("store")
+	.directive("reviewForm", function() {
+		return {
+			restrict: "A",
+			templateUrl: "app/views/review-form.html"
 		}
 	});

@@ -11,29 +11,6 @@
 	</ul>
 
 	<!-- review form -->
-	<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
-
-		<!-- live preview -->
-		<blockquote>
-			<strong>{{reviewCtrl.review.stars}} stars</strong>
-			{{reviewCtrl.review.body}}
-			<cite class="clearfix">-{{reviewCtrl.review.author}}</cite>
-		</blockquote>
-
-		<!-- new review form-->
-		<h4>Submit a Review</h4>
-		<fieldset class="form-group">
-			<select class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" ng-model="reviewCtrl.review.stars" required>
-				<option value="">Rate the Geometry</option>
-			</select>							
-		</fieldset>
-		<fieldset class="form-group">
-			<textarea class="form-control" placeholder="Write a short Review..." title="Review" ng-model="reviewCtrl.review.body" required></textarea>							
-		</fieldset>
-		<fieldset class="form-group">
-			<input class="form-control" type="email" placeholder="jimmy@example.com" title="Email" ng-model="reviewCtrl.review.author" required/>							
-		</fieldset>
-		<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
-		<div>reviewForm is {{reviewForm.$valid}}</div>
+	<form review-form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
 	</form>
 </div>
