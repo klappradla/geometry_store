@@ -1,4 +1,4 @@
-// modules
+// module
 angular.module("store", [ ]);
 
 var shapes = [
