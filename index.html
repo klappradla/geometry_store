@@ -8,16 +8,19 @@
 </head>
 
 <body class="container" ng-controller="StoreController as store">
-	<header>
-		<h1 class="text-center">Geometry Store</h1>
-      <h2 class="text-center">– get your shape –</h2>
+	<header class="page-header">
+		<h1 class="text-center">
+			Geometry Store<br>
+			<small>get your shape</small><br>
+			<span class="glyphicon glyphicon-heart"></span>
+		</h1>
 	</header>
 
 	<!-- products -->
 	<ul class="list-group">
 
 		<!-- product -->
-		<li class="list-group-item" ng-repeat="product in store.products" ng-hide="product.soldOut">
+		<li class="list-group-item clearfix" ng-repeat="product in store.products" ng-hide="product.soldOut">
 			<product-title></product-title>
 
 			<!-- images -->
@@ -26,7 +29,7 @@
 			<!-- tabs -->
 			<product-panel></product-panel>
 
-			<button ng-show="product.canPurchase">Add to Cart</button>
+			<button class="btn btn-primary" ng-show="product.canPurchase">Add to Cart</button>
 		</li>
 	</ul>
 

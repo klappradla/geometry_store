@@ -3,8 +3,8 @@
 		<img ng-src="{{product.images[gallery.current].full}}"/>
 	</div>
 	<ul class="list-inline clearfix">
-		<li class="thumbnail" ng-repeat="image in product.images">
-			<img ng-src="{{image.thumb}}"/>
+		<li ng-repeat="image in product.images">
+			<img class="img-thumbnail" ng-src="{{image.thumb}}"/>
 		</li>
 	</ul>
 </div>

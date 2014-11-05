@@ -1,9 +1,17 @@
+body {
+	padding-top: 10px;
+}
+
 .container {
 	max-width: 600px;
 }
 
 .img-wrap {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.gallery {
+	margin-bottom: 20px;
 }
 
 .ng-invalid.ng-dirty {
