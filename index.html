@@ -17,10 +17,8 @@
 	</header>
 
 	<!-- products -->
-	<ul class="list-group">
-
-		<!-- product -->
-		<li class="list-group-item clearfix" ng-repeat="product in store.products" ng-hide="product.soldOut">
+	<section class="panel panel-default clearfix" ng-repeat="product in store.products" ng-hide="product.soldOut">
+		<div class="panel-body">
 			<product-title></product-title>
 
 			<!-- images -->
@@ -29,9 +27,11 @@
 			<!-- tabs -->
 			<product-panel></product-panel>
 
-			<button class="btn btn-primary" ng-show="product.canPurchase">Add to Cart</button>
-		</li>
-	</ul>
+			<button class="btn btn-primary" ng-show="product.canPurchase">
+				<span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+			</button>
+		</div>		
+	</section>
 
 	<script type="text/javascript" src="app/assets/libs/angular.min.js"></script>
 	<script type="text/javascript" src="app/app.module.js"></script>
