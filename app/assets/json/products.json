@@ -1,0 +1,136 @@
+[
+	{
+		"name": "Square Shape",
+		"price": 5.99,
+		"description": "In geometry, a square is a regular quadrilateral, which means that it has four equal sides and four equal angles (90-degree angles, or right angles).",
+		"images": [
+			{
+				"full": "app/assets/images/dodecahedron-01-full.png",
+				"thumb": "app/assets/images/dodecahedron-01-thumb.png"
+			},
+			{
+				"full": "app/assets/images/dodecahedron-02-full.png",
+				"thumb": "app/assets/images/dodecahedron-02-thumb.png"
+			},
+			{
+				"full": "app/assets/images/dodecahedron-03-full.png",
+				"thumb": "app/assets/images/dodecahedron-03-thumb.png"
+			}
+		],
+		"reviews": [
+			{
+				"stars": 5,
+				"body": "I love this product!",
+				"author": "joe@thomas.com",
+				"createdAt": 1397490980837
+			},
+			{
+				"stars": 1,
+				"body": "This product sucks",
+				"author": "tim@hater.com",
+				"createdAt": 1397490980837
+			},
+			{
+				"stars": 3,
+				"body": "This product is kinda ok",
+				"author": "hann@walker.com",
+				"createdAt": 1397490980837
+			}
+		],
+		"canPurchase": true,
+		"soldOut": true
+	},
+	{
+		"name": "Triangle Shape",
+		"price": 9.50,
+		"description": "A triangle is a polygon with three edges and three vertices.",
+		"images": [
+			{
+				"full": "app/assets/images/pentagonal-01-full.png",
+				"thumb": "app/assets/images/pentagonal-01-thumb.png"
+			},
+			{
+				"full": "app/assets/images/pentagonal-02-full.png",
+				"thumb": "app/assets/images/pentagonal-02-thumb.png"
+			},
+			{
+				"full": "app/assets/images/pentagonal-03-full.png",
+				"thumb": "app/assets/images/pentagonal-03-thumb.png"
+			}
+		],
+		"reviews": [
+			{
+				"stars": 5,
+				"body": "I love this product!",
+				"author": "joe@thomas.com",
+				"createdAt": 1397490980837
+			},
+			{
+				"stars": 1,
+				"body": "This product sucks",
+				"author": "tim@hater.com",
+				"createdAt": 1397490980837
+			}
+		],
+		"canPurchase": false,
+		"soldOut": false
+	},
+	{
+		"name": "Pentagram Shape",
+		"price": 16.95,
+		"description": "A pentagram (sometimes known as a pentalpha or pentangle or a star pentagon) is the shape of a five-pointed star drawn with five straight strokes.",
+		"images": [
+			{
+				"full": "app/assets/images/dodecahedron-01-full.png",
+				"thumb": "app/assets/images/dodecahedron-01-thumb.png"
+			},
+			{
+				"full": "app/assets/images/dodecahedron-02-full.png",
+				"thumb": "app/assets/images/dodecahedron-02-thumb.png"
+			},
+			{
+				"full": "app/assets/images/dodecahedron-03-full.png",
+				"thumb": "app/assets/images/dodecahedron-03-thumb.png"
+			}
+		],
+		"reviews": [
+			{
+				"stars": 5,
+				"body": "I love this product!",
+				"author": "joe@thomas.com",
+				"createdAt": 1397490980837
+			}
+		],
+		"canPurchase": true,
+		"soldOut": false
+	},
+	{
+		"name": "Circle Shape",
+		"price": 8.95,
+		"description": "A circle is a simple shape of Euclidean geometry that is the set of all points in a plane that are at a given distance from a given point, the centre.",
+		"images": [
+			{
+				"full": "app/assets/images/dodecahedron-01-full.png",
+				"thumb": "app/assets/images/dodecahedron-01-thumb.png"
+			},
+			{
+				"full": "app/assets/images/dodecahedron-02-full.png",
+				"thumb": "app/assets/images/dodecahedron-02-thumb.png"
+			},
+			{
+				"full": "app/assets/images/dodecahedron-03-full.png",
+				"thumb": "app/assets/images/dodecahedron-03-thumb.png"
+			}
+		],
+		"reviews": [
+			{
+				"stars": 5,
+				"body": "I love this product!",
+				"author": "joe@thomas.com",
+				"createdAt": 1397490980837
+			}
+		],
+		"canPurchase": true,
+		"soldOut": false
+	}
+]
