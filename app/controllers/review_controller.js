@@ -1,4 +1,6 @@
-angular.module("store")
+(function() {
+	angular.module("product.reviews")
+	
 	.controller("ReviewController", function() {
 		this.review = {};
 
@@ -8,3 +10,5 @@ angular.module("store")
 			this.review = {};
 		};
 	});
+
+})();

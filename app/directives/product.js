@@ -1,23 +1,41 @@
-angular.module("store")
-	.directive("productTitle", function() {
-		return {
-			restrict: "E", // element
-			templateUrl: "app/views/product-title.html"
-		}
-	});
+(function() {
+	
+	angular.module("product.directives")
 
-angular.module("store")
-	.directive("productDescription", function() {
-		return {
-			restrict: "E",
-			templateUrl: "app/views/product-description.html"
-		}
-	});
+		.directive("productTitle", function() {
+			return {
+				restrict: "E",
+				templateUrl: "app/views/product-title.html"
+			}
+		})
 
-angular.module("store")
-	.directive("productSpecs", function() {
-		return {
-			restrict: "A", // attribute
-			templateUrl: "app/views/product-specs.html"
-		}
-	});
+		.directive("productDescription", function() {
+			return {
+				restrict: "E",
+				templateUrl: "app/views/product-description.html"
+			}
+		})
+
+		.directive("productSpecs", function() {
+			return {
+				restrict: "A",
+				templateUrl: "app/views/product-specs.html"
+			}
+		})
+
+		.directive("gallery", function() {
+			return {
+				restrict: "E",
+				templateUrl: "app/views/gallery.html",
+				controller: function() {
+					this.current = 0;
+
+					this.setCurrent = function(index) {
+						this.current = index || 0;
+					};
+				},
+				controllerAs: "gallery"
+			};
+		});
+
+})();
