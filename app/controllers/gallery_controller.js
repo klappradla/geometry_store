@@ -1,11 +1,11 @@
 (function() {
 	angular.module("product.directives")
 	
-	.controller("GalleryCtrl", function() {
-		this.current = 0;
+	.controller("GalleryCtrl", function($scope) {
+		this.current = $scope.product.images[0];
 
-		this.setCurrent = function(index) {
-			this.current = index || 0;
+		this.setCurrent = function(image) {
+			this.current = image;
 		};
 	});
 
