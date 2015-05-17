@@ -5,7 +5,7 @@
   "authors": [
     "Max Mulatz <klappradla@gmail.com>"
   ],
-  "main": "index.html",
+  "main": "app/index.html",
   "license": "MIT",
   "ignore": [
     "**/.*",
