@@ -1,50 +1,12 @@
 <!DOCTYPE html>
-<html ng-app="store">
+<html>
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="app/assets/styles/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="app/assets/styles/custom.css">
-	<title>Geometry Store</title>
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<body>
 
-<body class="container" ng-controller="StoreController as store">
-	<header class="page-header">
-		<h1 class="text-center">
-			Geometry Store<br>
-			<small>get your shape</small><br>
-			<span class="glyphicon glyphicon-heart"></span>
-		</h1>
-	</header>
-
-	<!-- products -->
-	<section class="panel panel-default clearfix" ng-repeat="product in store.products" ng-hide="product.soldOut">
-		<div class="panel-body">
-			<product-title></product-title>
-
-			<!-- images -->
-			<gallery></gallery>
-
-			<!-- tabs -->
-			<product-panel></product-panel>
-
-			<button class="btn btn-primary" ng-show="product.canPurchase">
-				<span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
-			</button>
-		</div>		
-	</section>
-
-	<script type="text/javascript" src="app/assets/libs/angular.min.js"></script>
-	<script type="text/javascript" src="app/app.module.js"></script>
-
-	<script type="text/javascript" src="app/controllers/store_controller.js"></script>
-	<script type="text/javascript" src="app/controllers/review_controller.js"></script>
-	<script type="text/javascript" src="app/controllers/gallery_controller.js"></script>
-	<script type="text/javascript" src="app/controllers/panel_controller.js"></script>
-
-	<script type="text/javascript" src="app/directives/product.js"></script>
-	<script type="text/javascript" src="app/directives/panel.js"></script>
-	<script type="text/javascript" src="app/directives/review.js"></script>
-
+  <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
 
 </body>
 </html>

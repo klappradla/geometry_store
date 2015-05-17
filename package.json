@@ -1,0 +1,22 @@
+{
+  "name": "geometry_store",
+  "version": "1.0.0",
+  "description": "A simple [Angular.js](https://angularjs.org/) application inspired by the _\"Shaping up with Angular.js\"_ course at [CodeSchool](https://www.codeschool.com/).",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/klappradla/geometry_store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klappradla/geometry_store/issues"
+  },
+  "homepage": "https://github.com/klappradla/geometry_store",
+  "devDependencies": {
+    "bower": "^1.4.1"
+  }
+}
