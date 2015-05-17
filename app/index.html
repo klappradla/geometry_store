@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<html ng-app="store">
+<html ng-app="geometryStore">
 <head>
   <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="container">
 
-  <p>{{ "hello you" }}</p>
+  <header>
+    
+  </header>
+
+  <main ng-controller="StoreController as store">
+
+    <section class="row" ng-repeat="product in store.products" ng-hide="product.soldOut">
+      <h1>{{ product.name }}</h1>
+      <em class="pull-right">{{ product.price }}</em>
+      <p>{{ product.description }}</p>
+      <button class="btn btn-primary" ng-show="product.canPurchase">Add to Cart</button>
+    </section>
+
+  </main>
 
   <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="/bower_components/angular/angular.js"></script>
   <script src="scripts/app.js"></script>
+  <script src="scripts/controller/store_controller.js"></script>
 
 </body>
 </html>
