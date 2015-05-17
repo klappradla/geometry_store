@@ -7,7 +7,7 @@ var gems = [
     price: 2.95,
     description: 'A triangle is a polygon with three edges and three vertices.',
     canPurchase: true,
-    soldOut: false
+    soldOut: true
   },
   {
     name: 'square',
