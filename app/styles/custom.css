@@ -1,0 +1,13 @@
+/* customize container */
+@media (min-width: 786px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px, 0;
+}
+
+.gallery > img {
+  padding-bottom: 1em;
+}
