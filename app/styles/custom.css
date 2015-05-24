@@ -11,3 +11,8 @@
 .gallery > img {
   padding-bottom: 1em;
 }
+
+.panel-content {
+  border-left: 1px solid #e5e5e5;
+  padding: 1em 1em 0.5em;
+}

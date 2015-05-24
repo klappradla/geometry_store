@@ -61,19 +61,19 @@
             </li>
           </ul>
           
-          <div ng-show="panel.isSelected(1)">
-            <blockquote>{{ product.description }}</blockquote>
+          <div class="panel-content" ng-show="panel.isSelected(1)">
+            <p>{{ product.description }}</p>
           </div>
-          <div class="panel" ng-show="panel.isSelected(2)">
-            <blockquote>None yet</blockquote>
+          <div class="panel-content" ng-show="panel.isSelected(2)">
+            <p>None yet</p>
           </div>
-          <div class="panel" ng-show="panel.isSelected(3)">
-            <blockquote>None yet</blockquote>
+          <div class="panel-content" ng-show="panel.isSelected(3)">
+            <p>None yet</p>
           </div>
         </section>
       </div>
     </section>
   </main>
-  
+
 </body>
 </html>
