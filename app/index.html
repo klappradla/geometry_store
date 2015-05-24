@@ -14,67 +14,66 @@
 
 <body class="container">
 
-    <header class="page-header">
-      <h1>Geometry Store <small>get your shape here!</small></h1>      
-    </header>
+  <header class="page-header">
+    <h1>Geometry Store <small>get your shape here!</small></h1>      
+  </header>
 
-    <main class="row" ng-controller="StoreController as store">
+  <main class="row" ng-controller="StoreController as store">
 
-      <section class="panel panel-default" ng-repeat="product in store.products" ng-hide="product.soldOut">
+    <section class="panel panel-default" ng-repeat="product in store.products" ng-hide="product.soldOut">
 
-        <div class="panel-heading">
-          <h3>
-            {{ product.name }}
-            <em class="pull-right">{{ product.price | currency }}</em>
-          </h3>
-        </div>
+      <div class="panel-heading">
+        <h3>
+          {{ product.name }}
+          <em class="pull-right">{{ product.price | currency }}</em>
+        </h3>
+      </div>
 
-        <div class="panel-body">
+      <div class="panel-body">
 
-          <div class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
-            <img class="image-responsive center-block" ng-src="{{ product.images[gallery.current].full }}"/>
+        <section class="gallery" ng-show="product.images.length" ng-controller="GalleryController as gallery">
+          <img class="image-responsive center-block" ng-src="{{ product.images[gallery.current].full }}"/>
 
-            <div class="row text-center">
-              <div class="col-xs-12"></div>
-                <ul class="list-inline">
-                  <li ng-repeat="image in product.images">
-                    <img class="img-thumbnail" ng-src="{{ image.thumb }}" ng-click="gallery.setCurrent($index)"/>
-                  </li>
-                </ul>
-            </div>
+          <div class="row text-center">
+            <div class="col-xs-12"></div>
+              <ul class="list-inline">
+                <li ng-repeat="image in product.images">
+                  <img class="img-thumbnail" ng-src="{{ image.thumb }}" ng-click="gallery.setCurrent($index)"/>
+                </li>
+              </ul>
           </div>
-          
-          <button class="btn btn-primary" ng-show="product.canPurchase">Add to Cart</button>
+        </section>
 
-          <section ng-controller="PanelController as panel">
-            <ul class="nav nav-pills">
-              <li ng-class="{ active: panel.isSelected(1) }">
-                <a href ng-click="panel.selectTab(1)">Description</a>
-              </li>
-              <li ng-class="{ active: panel.isSelected(2) }">
-                <a href ng-click="panel.selectTab(2)">Specifications</a>
-              </li>
-              <li ng-class="{ active: panel.isSelected(3) }">
-                <a href ng-click="panel.selectTab(3)">Reviews</a>
-              </li>
-            </ul>
-            
-            <div ng-show="panel.isSelected(1)">
-              <h4>Description</h4>
-              <blockquote>{{ product.description }}</blockquote>
-            </div>
-            <div class="panel" ng-show="panel.isSelected(2)">
-              <h4>Specifications</h4>
-              <blockquote>None yet</blockquote>
-            </div>
-            <div class="panel" ng-show="panel.isSelected(3)">
-              <h4>Reviews</h4>
-              <blockquote>None yet</blockquote>
-            </div>
+        <section class="text-right">
+          <button class="btn btn-primary" ng-show="product.canPurchase">Add to Cart</button>
+        </section>
+
+        <section ng-controller="PanelController as panel">
+          <ul class="nav nav-tabs">
+            <li ng-class="{ active: panel.isSelected(1) }">
+              <a href ng-click="panel.selectTab(1)">Description</a>
+            </li>
+            <li ng-class="{ active: panel.isSelected(2) }">
+              <a href ng-click="panel.selectTab(2)">Specifications</a>
+            </li>
+            <li ng-class="{ active: panel.isSelected(3) }">
+              <a href ng-click="panel.selectTab(3)">Reviews</a>
+            </li>
+          </ul>
+          
+          <div ng-show="panel.isSelected(1)">
+            <blockquote>{{ product.description }}</blockquote>
+          </div>
+          <div class="panel" ng-show="panel.isSelected(2)">
+            <blockquote>None yet</blockquote>
+          </div>
+          <div class="panel" ng-show="panel.isSelected(3)">
+            <blockquote>None yet</blockquote>
+          </div>
         </section>
       </div>
     </section>
-
   </main>
+  
 </body>
 </html>
