@@ -16,3 +16,11 @@
   border-left: 1px solid #e5e5e5;
   padding: 1em 1em 0.5em;
 }
+
+.ng-invalid.ng-dirty {
+  border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+  border-color: #78FA89;
+}
