@@ -17,6 +17,18 @@ var gems = [
         full: 'images/triangle-02-full.png',
         thumb: 'images/triangle-02-thumb.png'
       }
+    ],
+    reviews: [
+      {
+        stars: 5,
+        body: 'I love this product!',
+        author: 'joe@thomas.com'
+      },
+      {
+        stars: 1,
+        body: 'This product sucks',
+        author: 'tim@hater.com'
+      }
     ]
   },
   {
@@ -38,6 +50,18 @@ var gems = [
         full: 'images/square-03-full.png',
         thumb: 'images/square-03-thumb.png'
       }
+    ],
+    reviews: [
+      {
+        stars: 5,
+        body: 'I love this product!',
+        author: 'joe@thomas.com'
+      },
+      {
+        stars: 1,
+        body: 'This product sucks',
+        author: 'tim@hater.com'
+      }
     ]
   },
   {
@@ -45,6 +69,18 @@ var gems = [
     price: 4.95,
     description: 'A circle is a simple shape of Euclidean geometry that is the set of all points in a plane that are at a given distance from a given point, the centre.',
     canPurchase: true,
-    soldOut: false
+    soldOut: false,
+    reviews: [
+      {
+        stars: 5,
+        body: 'I love this product!',
+        author: 'joe@thomas.com'
+      },
+      {
+        stars: 1,
+        body: 'This product sucks',
+        author: 'tim@hater.com'
+      }
+    ]
   }
 ];

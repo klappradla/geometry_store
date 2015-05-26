@@ -68,7 +68,38 @@
             <p>None yet</p>
           </div>
           <div class="panel-content" ng-show="panel.isSelected(3)">
-            <p>None yet</p>
+            <p ng-repeat="review in product.reviews">
+              <strong>{{ review.stars }} Stars</strong>
+              {{ review.body }}<br>
+              <cite>- {{ review.author }}</cite>
+            </p>
+
+            <form name="reviewForm">
+              <p>                
+                <strong>{{ review.stars }} Stars</strong>
+                {{ review.body }}<br>
+                <cite>- {{ review.author }}</cite>
+              </p>
+
+              <h4>Submit a Review</h4>
+              <fieldset class="form-group">
+                <select class="form-control" ng-model="review.stars">
+                  <option value="">Rate the Product</option>
+                  <option value="1">1 Star</option>
+                  <option value="2">2 Stars</option>
+                  <option value="3">3 Stars</option>
+                  <option value="4">4 Stars</option>
+                  <option value="5">5 Stars</option>
+                </select>
+              </fieldset>
+              <fieldset class="form-group">
+                <textarea class="form-control" rows="3" placeholder="Write a short review of the product" ng-model="review.body"></textarea>
+              </fieldset>
+              <fieldset class="form-group">
+                <input class="form-control" placeholder="Enter email address" ng-model="review.author" type="email">
+              </fieldset>
+              <button type="submit" class="btn btn-default">Submit Review</button>
+            </form>
           </div>
         </section>
       </div>
