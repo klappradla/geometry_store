@@ -11,6 +11,7 @@
   <script src="scripts/controller/panel_controller.js"></script>
   <script src="scripts/controller/gallery_controller.js"></script>
   <script src="scripts/controller/review_controller.js"></script>
+  <script src="scripts/directives/product_title.js"></script>
 </head>
 
 <body class="container">
@@ -24,10 +25,7 @@
     <section class="panel panel-default" ng-repeat="product in store.products" ng-hide="product.soldOut">
 
       <div class="panel-heading">
-        <h3>
-          {{ product.name }}
-          <em class="pull-right">{{ product.price | currency }}</em>
-        </h3>
+        <product-title></product-title>
       </div>
 
       <div class="panel-body">
